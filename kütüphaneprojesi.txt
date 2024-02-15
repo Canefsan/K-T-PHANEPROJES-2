@@ -1,0 +1,46 @@
+books = []
+
+def add_book():
+    isim = input("Kitap İsmini Giriniz:")
+    yazar = input("Yazarin Adini Giriniz :")
+    yil = input("Yayin Yili Giriniz:")
+    books.append({"isim": isim , "yazar" : yazar , "yil":yil})
+    print(f"{isim}, Kutuphaneye Eklendi")
+
+
+    def get_books()
+        for index, book in enumerate(books,1):
+            print(f "{index}. kitap ismi : {book ["isim]},yazar : {book['yazar']},yil : {book['yil']}")
+
+    def find_book():
+        aranan_isim = input("Aramak İstediğiniz Kitap İsmini Giriniz:")
+        bulunan_kitaplar= [book for book in books if aranan_isim.lower() in book ['isim'].lower()]
+
+        if bulunan_kitaplar:
+            for book in bulunan_kitaplar:
+                print(f"Kitap İsmi : {book['isim']},Yazar:{book['yazar']}, Yil:{book['yil']}")
+        else:
+            print("Bu İsimde Kitap Bulunamadı")
+
+
+    while true:
+        print("Key Kutuphane Menu")
+        print("1-kitap Ekle")
+        print("2-Kitapları Listele")
+        print("3-Kitap Ara")
+        print("4-Kitap Sil")
+
+        secim = input("yapmak İstediğiniz Islemi Seciniz (1/2/3/4):")
+        if secim == "1":
+            add_book()
+        elif secim == "2":
+            get_books()
+        elif secim =="3":
+            find_book()
+        elif secim == "4":
+            print("Kitap Siliniyor.....")
+            break 
+        else:
+            print("Gecersiz Bir Secim Yaptiniz!!!")
+
+
